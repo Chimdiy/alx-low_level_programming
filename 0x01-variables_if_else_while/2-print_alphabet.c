@@ -4,7 +4,7 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return : Always 0 (Success)
  */
 int main(void)
 {
@@ -13,7 +13,7 @@ int main(void)
 	while (c <= 'z') 
 	{
 		putchar(c);
-	       	c++;
+		c++;
 	}
 	putchar('\n');
 	return (0);
