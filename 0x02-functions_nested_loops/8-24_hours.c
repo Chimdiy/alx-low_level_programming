@@ -1,10 +1,20 @@
 #include "main.h"
 /**
- * print_minutes - prints two-digit minute or hour
- * @time: the time to print (hour or minute)
+ * jack_bauer - prints every minute of the day of Jack Bauer
  */
 void jack_bauer(void)
 {
-	putchar((time / 10) + '0');
-	putchar((time % 10) + '0');
+    int hour, minute;
+
+    for (hour = 0; hour < 24; hour++)
+    {
+        for (minute = 0; minute < 60; minute++)
+        {
+            print_minutes(hour);
+            putchar(':');
+            print_minutes(minute);
+            putchar('\n');
+        }
+    }
 }
+
