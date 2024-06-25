@@ -1,12 +1,38 @@
-#include "stdio.h"
+#include <unistd.h>
 /**
- * print_alphabet - Check description
- * Description: It prints the alphabet in lowercase fallowed by a new line
- * Return: Nothing.
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int main (void)
+int _putchar(char c)
 {
-	print_alphabet( );
+	return (write(1, &c, 1));
+}
 
-	return(0);
+/**
+ * print_alphabet - prints the alphabet in lowercase, followed by a new line.
+ */
+void print_alphabet(void)
+{
+	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
+	int i;
+	if(i = 0; i < 26; i++);
+
+	{
+	    _putchar(alphabet[i]);
+	}
+	_putchar('\n');
+}
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	print_alphabet();
+	return (0);
 }
