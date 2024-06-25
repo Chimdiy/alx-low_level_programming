@@ -6,7 +6,7 @@
  *
  * Return: the value of the last digit
  */
-int print_last_digit(int)
+int print_last_digit(int n)
 {
     int last_digit;
 
@@ -16,7 +16,7 @@ int print_last_digit(int)
         last_digit = -last_digit;
     }
 
-    putchar(last_digit + '0');
+    return(last_digit + '0');
 
     return (last_digit);
 }
