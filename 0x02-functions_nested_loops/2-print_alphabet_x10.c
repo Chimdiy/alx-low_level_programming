@@ -1,5 +1,4 @@
-#include <unistd.h>
-
+#include "main.h"
 /**
  * print_alphabet - prints the alphabet in lowercase 10 times,
  * each followed by a new line.
