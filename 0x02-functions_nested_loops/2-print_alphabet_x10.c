@@ -1,5 +1,4 @@
 #include <unistd.h>
-
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
@@ -9,7 +8,7 @@
  */
 int _putchar(char c)
 {
-    return (write(1, &c, 1));
+	return (write(1, &c, 1));
 }
 
 /**
@@ -18,17 +17,17 @@ int _putchar(char c)
  */
 void print_alphabet_x10(void)
 {
-    char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
-    int i, j;
+	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
+	int i, j;
 
-    for (j = 0; j < 10; j++)
-    {
-        for (i = 0; i < 26; i++)
-        {
-            _putchar(alphabet[i]);
-        }
-        _putchar('\n');
-    }
+	for (j = 0; j < 10; j++)
+	{
+		for (i = 0; i < 26; i++)
+		{
+			_putchar(alphabet[i]);
+		}
+		_putchar('\n');
+	}
 }
 
 /**
@@ -38,6 +37,6 @@ void print_alphabet_x10(void)
  */
 int main(void)
 {
-    print_alphabet_x10();
-    return (0);
+	print_alphabet_x10();
+	return (0);
 }
