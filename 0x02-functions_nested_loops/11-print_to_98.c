@@ -1,20 +1,35 @@
 #include "main.h"
 /**
- * print_number - prints an integer using putchar
- * @n: the integer to print
+ * print_to_98 - Check main
+ * @n: A input integer
+ * Description: function that prints all natural numbers
+ * from n to 98, followed by a new line.
+ * Return: Nothing
  */
-void print_number(int n)
+void print_to_98(int n)
 {
-    if (n < 0)
-    {
-        putchar('-');
-        n = -n;
-    }
+	if (n <= 98)
+	{
+		for (; n <= 98; n++)
+		{
+			printf("%d", n);
 
-    if (n / 10)
-    {
-        print_number(n / 10);
-    }
+			if (n == 98)
+				continue;
+			printf(", ");
+		}
+		printf("\n");
+	}
+	else
+	{
+		for (; n >= 98; n--)
+		{
+			printf("%d", n);
 
-    putchar((n % 10) + '0');
+			if (n == 98)
+				continue;
+			printf(", ");
+		}
+		printf("\n");
+	}
 }
