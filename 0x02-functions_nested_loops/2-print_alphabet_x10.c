@@ -12,10 +12,10 @@ int _putchar(char c)
 }
 
 /**
- * print_alphabet_x10 - prints the alphabet in lowercase 10 times,
+ * print_alphabet - prints the alphabet in lowercase 10 times,
  * each followed by a new line.
  */
-void print_alphabet_x10(void)
+void print_alphabet(void)
 {
 	char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
 	int i, j;
@@ -30,13 +30,3 @@ void print_alphabet_x10(void)
 	}
 }
 
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-	print_alphabet_x10();
-	return (0);
-}
