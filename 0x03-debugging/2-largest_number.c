@@ -1,27 +1,31 @@
 #include "main.h"
 /**
- * largest_number - returns the largest of 3 numbers
- * @a: first integer
- * @b: second integer
- * @c: third integer
- * Return: largest number
+ * main - Entry point of the program
+ *
+ * Description: This program reads three numbers from the user and prints
+ * the largest of the three numbers.
+ *
+ * Return: Always 0 (Success)
  */
-int largest_number(int a, int b, int c)
+int main(void)
 {
-	int largest;
+    int num1, num2, num3;
 
-	if (a >= b && a >= c)
-	{
-		largest = a;
-	}
-	else if (b >= a && b >= c)
-	{
-		largest = b;
-	}
-	else if (c >= a && c >= b)
-	{
-		largest = c;
-	}
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
 
-	return (largest);
+    if (num1 >= num2 && num1 >= num3)
+    {
+        printf("The largest number is: %d\n", num1);
+    }
+    else if (num2 >= num1 && num2 >= num3)
+    {
+        printf("The largest number is: %d\n", num2);
+    }
+    else
+    {
+        printf("The largest number is: %d\n", num3);
+    }
+
+    return (0);
 }
