@@ -1,51 +1,37 @@
 #include "main.h"
 /**
- * base10 - power in 10 base
- * @n: an exponent
- * Return: returns 10 to power exponent
- */
-int base10(int n)
+* rot13 - encodes a string using rot13 encryption
+* @s: a pointer given by main
+*
+* Description: change all alpha characters by rot13 rules
+* Return: returns the s pointer
+*/
+
+char *rot13(char *s)
 {
-	int base = 10;
+	int i = 0;
+	int j;
+	int begin[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
+'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A',
+'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
+'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+	int end[] = {'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'N', 'O',
+'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E',
+'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'};
 
-	while (n > 0)
+	while (s[i] != 0)
 	{
-		base *= 10;
-		n--;
-	}
-	return (base);
-}
-
-/**
- * print_number - prints integers enters as parameters using putchar
- * @n: integer to print
- * Return: void
- */
-void print_number(int n)
-{
-	int power;
-
-	power = base10(8);
-
-	if (n < 0)
-	{
-		_putchar('-');
-		n *= -1;
-	}
-
-	if (n == 0)
-		_putchar('0');
-
-	else
-	{
-		while (n / power == 0)
-			power /= 10;
-
-		while (power >= 1)
+		for (j = 0; j < 52; j++)
 		{
-			_putchar((n / power) + '0');
-			n %= power;
-			power /= 10;
+			if (s[i] == begin[j])
+			{
+				s[i] = end[j];
+				break;
+			}
+
 		}
+		i++;
 	}
+	return (s);
 }
